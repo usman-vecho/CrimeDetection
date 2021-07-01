@@ -14,7 +14,7 @@ from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import f1_score
 from sklearn.metrics import auc
 from matplotlib import pyplot
-
+from sklearn.metrics import average_precision_score
 
 train_data = np.load('Dataset_v1.npy', allow_pickle=True)[:20]
 
@@ -63,10 +63,6 @@ from sklearn.multiclass import OneVsRestClassifier
 
 y_score = model.predict(X_test)
 
-
-
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import average_precision_score
 
 # For each class
 precision = dict()
